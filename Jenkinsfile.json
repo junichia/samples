@@ -1,0 +1,100 @@
+node {
+
+  env.MYSAUCE_BUILD_DOCKER = "microsoft/dotnet:1.0.0-preview2-sdk"
+
+  slackSend channel: "${channel}", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Started (<${env.BUILD_URL}|Open>)"
+
+  try {
+
+    stage "git checkout"
+      checkout()
+
+      sh "git rev-parse --short HEAD > .git/commit-id"
+      commit_id = readFile('.git/commit-id')
+
+      slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} git checkout: ${commit_id}"
+
+    stage "dotnet build"
+      sh 'docker pull ${MYSAUCE_BUILD_DOCKER}'
+
+      sh 'docker run --rm -v ${HOST_JENKINS_HOME}/workspace/${JOB_BASE_NAME}:/mysauce_core ${MYSAUCE_BUILD_DOCKER} /bin/sh -c \'cd /mysauce_core/src/Mysauce && dotnet restore && dotnet build\''
+
+      slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} dotnet build"
+
+    stage "dotnet test"
+      sh 'docker run --rm -v ${HOST_JENKINS_HOME}/workspace/${JOB_BASE_NAME}:/mysauce_core ${MYSAUCE_BUILD_DOCKER} /bin/sh -c \'cd /mysauce_core/test/Mysauce.Test && dotnet restore && dotnet test\''
+
+      slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} dotnet test"
+
+    stage "dotnet publish"
+      sh 'docker run --rm -v ${HOST_JENKINS_HOME}/workspace/${JOB_BASE_NAME}:/mysauce_core ${MYSAUCE_BUILD_DOCKER} /bin/sh -c \'cd /mysauce_core/src/Mysauce && dotnet restore && dotnet publish --output /mysauce_core/infra/dotnetapp\''
+
+      slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} dotnet publish"
+
+    // This step should not normally be used in your script. Consult the inline help for details.
+    docker.withServer('unix:///var/run/docker.sock') {
+
+      // some block
+      stage "docker build"
+        docker.image('microsoft/dotnet:1.0.1-core').pull()
+
+        def image = docker.build("${env.JOB_NAME}:${env.BUILD_NUMBER}", "${env.JENKINS_HOME}/workspace/${env.JOB_BASE_NAME}/infra/dotnetapp")
+
+        slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} docker build"
+
+      stage "test container"
+        // Test container then stop and remove it
+        def container = image.run()
+        container.stop()
+
+        slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} test container"
+
+      stage "serverspec"
+        docker.build("serverspec", "${env.JENKINS_HOME}/workspace/${env.JOB_BASE_NAME}/infra/serverspec")
+
+        sh 'docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ${HOST_JENKINS_HOME}/workspace/${JOB_BASE_NAME}/infra/serverspec/dotnetapp_spec:/serverspec -e MYSAUCE_DOCKER_IMAGE=${JOB_NAME}:${BUILD_NUMBER} serverspec rake'
+
+        slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} serverspec"
+
+      stage "docker push"
+        // This step should not normally be used in your script. Consult the inline help for details.
+        docker.withRegistry("https://${docker_registry}", "ecr:iam-mysauce") {
+          // some block
+          image.push("${env.BUILD_NUMBER}")
+          slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} docker push"
+        }
+    }
+
+    stage 'staging deploy'
+      sshagent(['ssh-alterbooth']) {
+        // some block
+        sh 'ssh -p 22 -o "StrictHostKeyChecking=no" alterbooth@jenkins "cd mysauce_ansible; ansible-playbook -i staging/inventory site.yml -vv --tags \\"mysauce,docker-login,imagemagick\\" --extra-vars \\"acs_mysauce_next_image_tag=${BUILD_NUMBER} acs_imagemagick_expiration_image_tag=latest acs_imagemagick_preview_image_tag=latest\\""'
+      }
+      slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} staging deploy"
+
+    stage 'git tag'
+      sh 'jq -r ".version" src/Mysauce/project.json | tr -d "\n" > .projectversion'
+      def project_version = readFile('.projectversion')
+      def tag_version = "${project_version}.${env.BUILD_NUMBER}"
+
+      env.MYSAUCE_TAG_NAME = "build-${tag_version}"
+
+      sshagent(['ssh-backlog']) {
+        // some block
+        sh 'git tag ${MYSAUCE_TAG_NAME}'
+        sh 'git push origin ${MYSAUCE_TAG_NAME}'
+      }
+
+      slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} git tag ${env.MYSAUCE_TAG_NAME}"
+
+  } catch (err) {
+
+    currentBuild.result = "FAILURE"
+
+    slackSend channel: "${channel}", color: "danger", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Failure: ${err} (<${env.BUILD_URL}|Open>)"
+
+    throw err
+  }
+
+  slackSend channel: "${channel}", color: "good", message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Success (<${env.BUILD_URL}|Open>)"
+}

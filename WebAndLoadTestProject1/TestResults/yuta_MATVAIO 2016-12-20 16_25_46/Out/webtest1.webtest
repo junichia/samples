@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest1" Id="a20ed876-00c3-4cdb-8138-c57f398c88d8" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.c431b270-1be6-4935-b1c0-5efbf56f7da3.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="22f021a7-9aa3-49e8-801a-350997e5f5b2" Version="1.1" Url="http://mysaucefactory-staging.azurewebsites.net/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="3c4387a3-9f7b-4bf1-822a-5d67c1524302" Version="1.1" Url="http://mysaucefactory-demo.azurewebsites.net/fonts/fontawesome-webfont.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="64970a8d-929b-4ea0-b139-88d720952672" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/featuredproducts" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="id%2Cproduct_id%2Ctitle%2Cpicture" RecordedValue="id%2Cproduct_id%2Ctitle%2Cpicture" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="limit" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="offset" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="sort" Value="product_id" RecordedValue="product_id" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="asc" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="379e889c-4022-4f1f-97be-37305537f5d6" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/featuredproducts" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/" />
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="id%2Cproduct_id%2Ctitle%2Cpicture" RecordedValue="id%2Cproduct_id%2Ctitle%2Cpicture" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="limit" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="offset" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="sort" Value="product_id" RecordedValue="product_id" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="asc" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="1878ea2e-4617-462f-b619-775dac32d529" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/5cb84f47-c913-4065-754c-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="4f586e0b-cbba-4598-b7cd-166ebfe2e3df" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/5cb84f47-c913-4065-754c-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/" />
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="02acb83e-12a6-4224-9b66-d388ef649d45" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/c48f5bf5-df28-4309-754e-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="9145f975-42e5-4c8c-b861-53aed1628391" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/c48f5bf5-df28-4309-754e-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/" />
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="46c0b5dd-01a4-4b07-a4cc-2b3d12d01657" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="ea2d4cc1-ea0b-46b5-a683-ad1112b8618a" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/" />
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="a0b9abd6-213d-4ce5-acb5-64b4b83ba985" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/659be244-5f4b-445e-7552-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="9c149cbc-c3e3-4225-a6d5-7eac40fca5df" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/659be244-5f4b-445e-7552-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/" />
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="3676c8c7-2d7f-49d0-86e6-fa6d8eb96c57" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/e1ce10f6-1ea2-4f4d-7556-08d4140bfb38" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="14b6cb98-4c33-480a-a58b-bfc6143cabef" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/e1ce10f6-1ea2-4f4d-7556-08d4140bfb38" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/" />
+            <Header Name="Authorization" Value="xxx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="fields" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+    </Request>
+    <Request Method="GET" Guid="eaec0e65-ed29-4b49-b8eb-e47bcff19591" Version="1.1" Url="http://mysaucefactory-staging.azurewebsites.net/products/list.html" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="OPTIONS" Guid="78004461-6249-4e8c-8aba-0336fa47eb92" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <QueryStringParameters>
+            <QueryStringParameter Name="name" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="fields" Value="id%2Cname%2Coverview%2Cpicture" RecordedValue="id%2Cname%2Coverview%2Cpicture" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="status" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="limit" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="offset" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="sort" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="asc" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b49fe686-e466-4bdb-81ae-7aed1faaee1c" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/products/list.html" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="fields" Value="id%2Cname%2Coverview%2Cpicture" RecordedValue="id%2Cname%2Coverview%2Cpicture" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="status" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="limit" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="offset" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sort" Value="name" RecordedValue="name" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="asc" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="e2e479ba-607b-458f-a266-7a1625e17ee1" Version="1.1" Url="http://mysaucefactory-staging.azurewebsites.net/products/detail.html" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="b3c57472-5b41-4eaf-a8b1-c211cf90a8b1" Version="1.1" Url="http://mysaucefactory-demo.azurewebsites.net/fonts/fontawesome-webfont.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/products/detail.html?id=a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="27abbc73-68ab-433e-bdde-7e2805c1e0e2" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/a0aa49b9-9b9d-4a5e-7550-08d4140bfb38/all" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="a8325c87-03b2-4027-a1f2-1b41af048964" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/a0aa49b9-9b9d-4a5e-7550-08d4140bfb38/all" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/products/detail.html?id=a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" />
+          </Headers>
+        </Request>
+        <Request Method="OPTIONS" Guid="c5fe5b72-1bfd-497c-978a-c37067bc584c" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/productcontainers" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <QueryStringParameters>
+            <QueryStringParameter Name="ProductId" Value="a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" RecordedValue="a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="d5987386-c0a3-4600-acc9-d8e2ac25e621" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/productcontainers" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/products/detail.html?id=a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="ProductId" Value="a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" RecordedValue="a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="c4b1345f-59d5-413c-9711-85cb19e11645" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/containers/82538226-ad4f-4053-19e7-08d4140bfa46" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+        <Request Method="GET" Guid="9e963149-e445-423c-bd1a-559d76d3401e" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/containers/82538226-ad4f-4053-19e7-08d4140bfa46" ThinkTime="16" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/products/detail.html?id=a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" />
+          </Headers>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/products/list.html" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" RecordedValue="a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="eb3d3961-7f92-44f8-8251-3b7906899553" Version="1.1" Url="http://mysaucefactory-staging.azurewebsites.net/order/product.html" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="1c87a0e9-76ef-454c-9119-8c2673221f83" Version="1.1" Url="http://mysaucefactory-demo.azurewebsites.net/fonts/fontawesome-webfont.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/order/product.html" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="OPTIONS" Guid="67d6e9b7-43a5-41f5-8a02-a960aabeb64b" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/a0aa49b9-9b9d-4a5e-7550-08d4140bfb38/labels/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <StringHttpBody ContentType="" InsertByteOrderMark="False">
+          </StringHttpBody>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/products/detail.html?id=a0aa49b9-9b9d-4a5e-7550-08d4140bfb38" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="ea1b16d0-e35e-4d59-8e45-58f086038d7e" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/a0aa49b9-9b9d-4a5e-7550-08d4140bfb38/labels/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/order/product.html" />
+      </Headers>
+    </Request>
+    <Request Method="OPTIONS" Guid="b99e383e-9c68-4b2d-a678-a0aa4c07e073" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/a0aa49b9-9b9d-4a5e-7550-08d4140bfb38/matter" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="3467d88f-e2bf-449c-9278-c5971c82d18a" Version="1.1" Url="https://gw.mysaucefactory.com/dev/mysauce-api-proxy-dev/v1.0/products/a0aa49b9-9b9d-4a5e-7550-08d4140bfb38/matter" ThinkTime="6" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/order/product.html" />
+      </Headers>
+      <StringHttpBody ContentType="application/json" InsertByteOrderMark="False">ewAiAG0AYQB0AGUAcgBpAGEAbABzACIAOgBbAHsAIgBpAGQAIgA6ACIAMAA0AGQANwA0AGUAMQAxAC0AMQAzADIAZgAtADQANABmAGMALQBlADcAZAA1AC0AMAA4AGQANAAxADQAMABiAGYAYgA4AGIAIgAsACIAcABhAHIAYQBtAGUAdABlAHIAIgA6ACIAMQAiACwAIgBvAHIAZABlAHIAXwBpAGQAIgA6ADAALAAiAG8AcgBkAGUAcgAiADoAbgB1AGwAbAB9ACwAewAiAGkAZAAiADoAIgAxAGEAMgBlAGYAMAAxADcALQBiADMAYQBlAC0ANABiADAAMgAtAGUANwBkADYALQAwADgAZAA0ADEANAAwAGIAZgBiADgAYgAiACwAIgBwAGEAcgBhAG0AZQB0AGUAcgAiADoAIgAyACIALAAiAG8AcgBkAGUAcgBfAGkAZAAiADoAMAAsACIAbwByAGQAZQByACIAOgBuAHUAbABsAH0ALAB7ACIAaQBkACIAOgAiAGEAMQAyADkAOAAyAGEANwAtADgANwBjADcALQA0ADUAMgBhAC0AZQA3AGQANwAtADAAOABkADQAMQA0ADAAYgBmAGIAOABiACIALAAiAHAAYQByAGEAbQBlAHQAZQByACIAOgAiADEAIgAsACIAbwByAGQAZQByAF8AaQBkACIAOgAwACwAIgBvAHIAZABlAHIAIgA6AG4AdQBsAGwAfQAsAHsAIgBpAGQAIgA6ACIAYQBlAGUANQBhADgANAAxAC0AMwAwAGIANQAtADQAMgAxAGMALQBlADcAZAA4AC0AMAA4AGQANAAxADQAMABiAGYAYgA4AGIAIgAsACIAcABhAHIAYQBtAGUAdABlAHIAIgA6ACIAMgAiACwAIgBvAHIAZABlAHIAXwBpAGQAIgA6ADAALAAiAG8AcgBkAGUAcgAiADoAbgB1AGwAbAB9ACwAewAiAGkAZAAiADoAIgBiAGIANAA0ADkAZgA5ADcALQAyAGQAZgAwAC0ANAA4AGIAYgAtAGUANwBkADkALQAwADgAZAA0ADEANAAwAGIAZgBiADgAYgAiACwAIgBwAGEAcgBhAG0AZQB0AGUAcgAiADoAIgAxACIALAAiAG8AcgBkAGUAcgBfAGkAZAAiADoAMAAsACIAbwByAGQAZQByACIAOgBuAHUAbABsAH0AXQB9AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="29db5f80-02b8-4e7c-a9d6-cdc9bd799339" Version="1.1" Url="http://mysaucefactory-staging.azurewebsites.net/login.html" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://mysaucefactory-demo.azurewebsites.net/order/product.html" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="mode" Value="shopping" RecordedValue="shopping" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="応答 URL" Description="リダイレクト後の応答 URL が、記録された応答 URL と同じかどうかを検証します。QueryString パラメーターは無視されます。" Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="応答時間の目標" Description="要求の応答時間が、要求で指定された目標値以下であるかどうか検証します。応答時間の目標値が 0 の場合、この目標値は無視されます。" Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

@@ -1,0 +1,8 @@
+D:\src\yuta\WebAndLoadTestProject1\WebAndLoadTestProject1\bin\Debug\WebTest1.webtest
+D:\src\yuta\WebAndLoadTestProject1\WebAndLoadTestProject1\bin\Debug\WebAndLoadTestProject1.dll
+D:\src\yuta\WebAndLoadTestProject1\WebAndLoadTestProject1\bin\Debug\WebAndLoadTestProject1.pdb
+D:\src\yuta\WebAndLoadTestProject1\WebAndLoadTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.WebTestFramework.dll
+D:\src\yuta\WebAndLoadTestProject1\WebAndLoadTestProject1\bin\Debug\ja\Microsoft.VisualStudio.QualityTools.WebTestFramework.resources.dll
+D:\src\yuta\WebAndLoadTestProject1\WebAndLoadTestProject1\obj\Debug\WebAndLoadTestProject1.csprojResolveAssemblyReference.cache
+D:\src\yuta\WebAndLoadTestProject1\WebAndLoadTestProject1\obj\Debug\WebAndLoadTestProject1.dll
+D:\src\yuta\WebAndLoadTestProject1\WebAndLoadTestProject1\obj\Debug\WebAndLoadTestProject1.pdb
